@@ -36,7 +36,7 @@ header a {
 }
 
 header h1 {
-    font-size: 5em;
+    font-size: 5vw;
     padding: 0;
     line-height: 100%;
 }
@@ -44,12 +44,16 @@ header h1 {
 .header-text {
     display: flex;
     flex-direction: column;
-    /* align-items: left; */
     justify-content: center;
     flex: 1;
-    padding: 5rem;
+    padding: 5rem auto 5rem 5rem;
 }
 
+.header-text p {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5vw;
+}
 .contact-info {
     display: flex;
 }
@@ -57,20 +61,20 @@ header h1 {
 .header-img {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    /* align-items: flex-end; */
+    
 }
 
 .header-img img {
-    height: 100%;
+    height: auto;
+    width: 40vw;
 }
 
 section {
     padding: 1rem 2rem;
-    /* margin: 1rem 0; */
     background: #fff;
     border-radius: 5px;
-    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
 }
 
 h2 {

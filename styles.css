@@ -317,15 +317,36 @@ ul li {
     text-shadow: #c1c1c1 0px 0px 5px;
 }
 
+@media screen and (max-width: 900px) {
+    footer {
+        padding : 0;
+        height: max-content;
+        margin: 1rem 0 0 0;
+    }
+    footer .poppins-thin {
+        font-size: 4vw;
+        font-weight: 200;
+        padding: 0 1rem;
+    }
+}
+a {
+    text-decoration: none;;
+}
 footer {
     text-align: center;
     padding: 0.2rem 0;
     margin: 1rem 0 4rem 0;
-    background: #ffffff;
+    background-color: #f0f0f0;
     color: #000000;
     width: 100%;
     bottom: 0;
     border-radius: 5rem;
+}
+footer:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow:  5px 5px 10px rgb(25, 25, 25),
+             -5px -5px 10px rgb(60, 60, 60);
 }
 footer .poppins-thin {
     font-weight: 200;

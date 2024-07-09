@@ -71,7 +71,7 @@ header h1 {
     width: 40vw;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .header-div {
         flex-direction: column;
         width: 100%;
@@ -85,7 +85,7 @@ header h1 {
     .header-img img {
         height: auto;
         width: 90vw;
-        margin: 2rem 0 6rem 0;
+        margin: 2rem 0 3rem 0;
     }
     .header-text p {
         padding: 0;

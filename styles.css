@@ -29,11 +29,11 @@ header {
     align-items: center;
 }
 
-header a {
+/* header a {
     color: #808080;
     margin: 0 10px;
     text-decoration: none;
-}
+} */
 
 header h1 {
     font-size: 5vw;
@@ -41,7 +41,6 @@ header h1 {
     line-height: 100%;
     margin: 0;
 }
-
 .header-div {
     display: flex;
     flex-direction: row;
@@ -54,7 +53,6 @@ header h1 {
     flex: 1;
     padding: 5rem auto 5rem 5rem;
 }
-
 .header-text p {
     padding: 0;
     margin: 0;
@@ -63,26 +61,40 @@ header h1 {
 .contact-info {
     display: flex;
 }
-
 .header-img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: flex-end; */
-    
 }
-
 .header-img img {
     height: auto;
     width: 40vw;
 }
 
-.mouse-animation {
-    /* display: flex; */
-    /* flex-direction: column; */
+@media screen and (max-width: 768px) {
+    .header-div {
+        flex-direction: column;
+        width: 100%;
+    }
+    header h1 {
+        font-size: 15vw;
+        padding: 0.5rem 0 0.5rem 0;
+        line-height: 100%;
+        margin: 0;
+    }
+    .header-img img {
+        height: auto;
+        width: 90vw;
+        margin: 2rem 0 6rem 0;
+    }
+    .header-text p {
+        padding: 0;
+        margin: 0;
+        font-size: 5vw;
+    }
 }
+
 #mouse-scroll {
-    /* position: fixed; */
     margin: auto;
     left: 50%;
     top: 80px;
@@ -207,16 +219,18 @@ header h1 {
 }
 
 section {
-    padding: 1rem 2rem;
-    background: #000000;
-    /* border-radius: 5px; */
+    /* padding: 1rem 2rem; */
+    /* background: #000000; */
 }
 
 h2 {
-    /* border-bottom: 2px solid #ffffff; */
-    padding-bottom: 0.5rem;
+    font-size: 10vw;
+    line-height: 100%;
 }
 
+h2.poppins-thin {
+    font-weight: bold;
+}
 .job, .education, .project {
     margin-bottom: 1rem;
 }
@@ -232,7 +246,7 @@ ul li {
 
 footer {
     text-align: center;
-    padding: 0.5rem 0;
+    padding: 0.2rem 0;
     margin: 0.5rem;
     background: #ffffff;
     color: #000000;
@@ -241,74 +255,6 @@ footer {
     border-radius: 5rem;
 }
 
-/* 
-*, *:after, *:before {
-    padding:0;
-    margin:0;
-    font-family:Arial;
-  }
-  
-  
-  ul.gallery {
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    margin:auto;
-    list-style:none;
-    width:955px;
-    height:450px;
-    border-radius:3px;
-    overflow:hidden;
-    box-shadow:1px 1px 3px 1px;
-  }
-  
-  
-  li.project {
-    position:relative;
-    width:190px;
-    height:450px;
-    float:left;
-    border-left:1px solid white;
-    -webkit-transition:all 0.7s;
-    -moz-transition:all 0.7s;
-    transition:all 0.7s;
-    box-shadow:-2px 0 10px 2px;
-  }
-  
-  ul.gallery li.project:first-child {
-    border:none;
-  }
-  
-  span {
-    display:block;
-    position:absolute;
-    bottom:0;
-    width:50%;
-    color:white;
-    white-space:nowrap;
-    padding:20px;
-    background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); 
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));
-    background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
-    background: -o-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
-    background: -ms-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
-    background: linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); 
-  
-  }
-  
-  img {
-    width:800px;
-    height:450px;
-  }
-  
-  ul.gallery:hover li.project {
-    width:50px;  
-  }
-  
-  
-  ul.gallery li.project:hover {
-    width:750px;
-  }
-   */
+footer .poppins-thin {
+    font-weight: 200;
+}

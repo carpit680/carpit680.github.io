@@ -9,7 +9,8 @@ body {
     margin: 0 auto;
     padding: 0;
     width: 90%;
-    background-color: #ffffff;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .poppins-thin {
@@ -21,12 +22,11 @@ body {
 header {
     background: #000000;
     color: #ffffff;
-    /* padding: 2rem 0; */
-    /* text-align: center; */
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 header a {
@@ -37,10 +37,16 @@ header a {
 
 header h1 {
     font-size: 5vw;
-    padding: 0;
+    padding: 0.5rem 0 0.5rem 0;
     line-height: 100%;
+    margin: 0;
 }
 
+.header-div {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
 .header-text {
     display: flex;
     flex-direction: column;
@@ -71,14 +77,143 @@ header h1 {
     width: 40vw;
 }
 
+.mouse-animation {
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+#mouse-scroll {
+    /* position: fixed; */
+    margin: auto;
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: 9999;
+}
+#mouse-scroll span{
+    display: block;
+    width: 5px; 
+    height: 5px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-right: 2px solid #fff; 
+    border-bottom: 2px solid #fff;
+    margin: 0 0 3px 5px;
+}
+#mouse-scroll .mouse {
+    height: 21px;
+    width: 14px;
+    border-radius: 10px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    border: 2px solid #ffffff;
+    top: 170px;
+}
+#mouse-scroll .down-arrow-1 {
+    margin-top: 6px;
+}
+#mouse-scroll .down-arrow-1, #mouse-scroll .down-arrow-2, #mouse-scroll .down-arrow-3 {
+    animation: mouse-scroll 1s infinite; 
+    -webkit-animation: mouse-scroll 1s infinite; 
+    -moz-animation: mouse-scroll 1s infinite;
+}
+#mouse-croll .down-arrow-1 {
+    animation-delay: .1s; 
+    -webkit-animation-delay: .1s; 
+    -moz-animation-delay: .1s;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-2 {
+    animation-delay: .2s; 
+    -webkit-animation-delay: .2s; 
+    -moz-animation-delay: .2s;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-3 {
+    animation-delay: .3s;
+    -webkit-animation-delay: .3s;
+    -moz-animation-dekay: .3s;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+}
+#mouse-scroll .mouse-in {
+    height: 5px;
+    width: 2px;
+    display: block; 
+    margin: 5px auto;
+    background: #ffffff;
+    position: relative;
+}
+#mouse-scroll .mouse-in {
+    animation: animated-mouse 1.2s ease infinite;
+    -webkit-animation: animated-mouse 1.2s ease infinite;
+    -moz-animation: mouse-animated 1.2s ease infinite;
+}
+
+@keyframes animated-mouse {
+0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+}
+}
+@-webkit-keyframes animated-mouse {
+0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+}
+}
+@-webkit-keyframes mouse-scroll {
+0% {
+    opacity: 1;
+}
+50% {
+    opacity: .5;
+}
+100% {
+    opacity: 1;
+} 
+}
+@keyframes mouse-scroll {
+0% {
+    opacity: 0;
+}
+50% {
+    opacity: 0.5;
+}
+100% {
+    opacity: 1;
+}
+}
+
 section {
     padding: 1rem 2rem;
-    background: #fff;
-    border-radius: 5px;
+    background: #000000;
+    /* border-radius: 5px; */
 }
 
 h2 {
-    border-bottom: 2px solid #333;
+    /* border-bottom: 2px solid #ffffff; */
     padding-bottom: 0.5rem;
 }
 
@@ -97,16 +232,16 @@ ul li {
 
 footer {
     text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
-    /* position: fixed; */
+    padding: 0.5rem 0;
+    margin: 0.5rem;
+    background: #ffffff;
+    color: #000000;
     width: 100%;
     bottom: 0;
+    border-radius: 5rem;
 }
 
-
-
+/* 
 *, *:after, *:before {
     padding:0;
     margin:0;
@@ -115,7 +250,6 @@ footer {
   
   
   ul.gallery {
-    /* position:absolute; */
     top:0;
     bottom:0;
     left:0;
@@ -154,13 +288,13 @@ footer {
     color:white;
     white-space:nowrap;
     padding:20px;
-    background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-    background: linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); 
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+    background: -o-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+    background: -ms-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+    background: linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); 
   
   }
   
@@ -177,9 +311,4 @@ footer {
   ul.gallery li.project:hover {
     width:750px;
   }
-  
-  
-  
-  
-  
-  
+   */

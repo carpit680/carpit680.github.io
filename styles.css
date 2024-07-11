@@ -318,6 +318,10 @@ h2.poppins-thin {
 }
 
 /* EXPERIENCE SECTION */
+
+#experience {
+    margin-bottom: 0;
+}
 h3 {
     font-size: 3vw;
     line-height: 100%;
@@ -429,11 +433,13 @@ li::marker {
 }
 
 /* PROJECTS SECTION */
+
 #projects {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0;
 }
 
 .project-cards {
@@ -481,7 +487,6 @@ li::marker {
     color: #6B7280;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    /* text-align: justify; */
 }
 
 .action {
@@ -515,8 +520,10 @@ transform: translateX(4px);
     }
 
 /* ACCOMPLISHMENTS SECTION */
+
 #accomplishments {
     font-size: 1.5vw;
+    margin: 0;
 }
 
 @media screen and (max-width: 500px) {
@@ -529,6 +536,7 @@ transform: translateX(4px);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin: 0 0 7rem 0;
 }
 #contact p.inria {
     font-size: 1.5vw;
@@ -577,6 +585,7 @@ transform: translateX(4px);
 }
 
 /* FOOTER SECTION  */
+
 @media screen and (max-width: 500px) {
     footer {
         padding : 0;

@@ -5,6 +5,7 @@
 
 html {
     background-color: #000000;
+    scroll-behavior: smooth;
 }
 body {
     font-family: Arial, sans-serif;
@@ -13,6 +14,7 @@ body {
     padding: 0;
     width: 90%;
     color: #ffffff;
+    scroll-behavior: smooth;
 }
 
 /* Works on Firefox */
@@ -51,6 +53,8 @@ a {
     text-decoration: none;;
 }
 
+/* Header */
+
 header {
     color: #ffffff;
     height: 100vh;
@@ -84,9 +88,7 @@ header h1 {
     font-size: 1.5vw;
     color: #d2d2d2;
 }
-.contact-info {
-    display: flex;
-}
+
 .header-img {
     display: flex;
     flex-direction: column;
@@ -115,7 +117,7 @@ header h1 {
     .header-img img {
         height: auto;
         width: 90vw;
-        margin: 2rem 0 3rem 0;
+        margin: 2rem 0 0rem 0;
     }
     .header-text p {
         padding: 0;
@@ -126,6 +128,8 @@ header h1 {
         display: none;
     }
 }
+
+/* SCROLL DOWN ANIMATION*/
 
 #mouse-scroll {
     margin: auto;
@@ -251,10 +255,7 @@ header h1 {
 }
 }
 
-/* #skills {
-    font-size: 3rem;
-} */
-
+/* SECTION COMMON STYLES */
 
 section {
     height: max-content;
@@ -265,7 +266,7 @@ h2 {
     font-size: 10vw;
     line-height: 100%;
     padding: 0;
-    width: 65%;
+    width: 75%;
 }
 h2.poppins-thin {
     font-weight: bold;
@@ -276,20 +277,24 @@ h2.poppins-thin {
     section {
         margin: 0 0 4rem 0;
         width: 100%;
-        /* min-height: fit-content; */
     }
     h2 {
         width: 100%;
     }
     h2.poppins-thin {
         font-size: 15vw;
+        margin: 1rem 0;
     }
 }
+
+/* SKILLS SECTION */
+
 .skills-list {
     font-size: 2vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-shrink: 1;
 }
 
 #skills span {
@@ -305,13 +310,14 @@ h2.poppins-thin {
     .skills-list {
         font-size: 4vw;
         margin: 0;
-        
     }
     #skills span {
         margin: 0.7rem 0;
     }
 
 }
+
+/* EXPERIENCE SECTION */
 h3 {
     font-size: 3vw;
     line-height: 100%;
@@ -352,7 +358,6 @@ h3 {
 
 .job-description a:hover {
     cursor: pointer;
-    /* color: #74818b; */
     text-shadow: #b3b3b3 0px 0px 3px;
 }
 .job-description ul {
@@ -387,6 +392,7 @@ li::marker {
 @media screen and (max-width: 500px) {
     .job {
         flex-direction: column;
+        /* flex-shrink: 1; */
         min-height: fit-content;
         height: 100%;
         margin: 3rem 0;
@@ -398,6 +404,9 @@ li::marker {
         margin: 0;
         width: 100%;
         padding: 0;
+    }
+    .job-description ul li{
+        width: 85vw;
     }
     .job-description ul {
         font-size: 4vw;
@@ -420,6 +429,103 @@ li::marker {
     }
 }
 
+/* PROJECTS SECTION */
+#projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.card {
+    max-width: 350px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+    margin: 2rem;
+    height: fit-content
+}
+
+.card a {
+    text-decoration: none
+}
+
+.content {
+    padding: 1.1rem;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    background-color: #6B7280;;
+    border-radius: 7px;
+}
+
+.title {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    /* text-align: justify; */
+}
+
+.action {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: #6B7280;;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.action span {
+transition: .3s ease;
+}
+
+.action:hover span {
+transform: translateX(4px);
+}
+
+.action .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 12
+    }
+
+/* ACCOMPLISHMENTS SECTION */
+#accomplishments {
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 500px) {
+    #accomplishments {
+        font-size: 5vw;
+    }
+}
+/* CONTACT SECTION  */
 #contact {
     display: flex;
     flex-direction: column;
@@ -446,8 +552,8 @@ li::marker {
     color: #6d818e;
 }
 .contact .mail {
-    font-size: 7vw;
-    padding-bottom: 1rem;
+    font-size: 5vw;
+    padding: 0rem 10rem;
 }
 .contact a:hover {
     color: #ffffff;
@@ -465,17 +571,24 @@ li::marker {
         padding: 2rem 0 0 0;
         font-size: 7vw;
     }
+    .contact .mail {
+        padding: 0;
+        font-size: 7vw;
+    }
 }
+
+/* FOOTER SECTION  */
 @media screen and (max-width: 500px) {
     footer {
         padding : 0;
         height: max-content;
-        /* margin: 1rem 0 0 0; */
+        margin: 1rem 0 0 0;
     }
     footer .poppins-thin {
         font-size: 4vw;
         font-weight: 200;
         padding: 0 1rem;
+        line-height: 20%;
     }
 }
 
@@ -497,4 +610,11 @@ footer:hover {
 }
 footer .poppins-thin {
     font-weight: 200;
+}
+footer .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 12
 }

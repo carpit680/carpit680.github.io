@@ -321,6 +321,9 @@ h2.poppins-thin {
 
 /* SKILLS SECTION */
 
+#skills {
+    padding-top: 1rem;
+}
 .skills-list {
     font-size: 2vw;
     display: flex;

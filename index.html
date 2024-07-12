@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arpit Chauhan - Portfolio</title>
+    <title>Arpit Chauhan</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -12,10 +12,11 @@
         <header>
             <div class="header-div">
                 <div class="header-text">
-                    <p class="inria">Hi.</p>
-                    <h1 class="poppins-thin">I'm Arpit.</h1>
-                    <h1 class="poppins-thin">An Engineer.</h1>
-                    <p class="inria">I am into robotics and embodied AI, a builder at heart, based out of busy Bangalore.</p>
+                    <p class="inria"><span>Hi.</span></p>
+                    <h1 class="poppins-thin">
+                        <span>I'm Arpit.</span></h1>
+                    <h1 class="poppins-thin"><span>An Engineer.</span></h1>
+                    <p class="inria"><span>I am into robotics and embodied AI, a builder at heart, based out of busy Bangalore.</span></p>
                 </div>
                 <div class="header-img">
                     <img src="assets/arpit.jpeg" alt="Profile Picture">
@@ -34,8 +35,8 @@
                 </div>
             </a>
         </header>
-        <section id="skills">
-            <h2 class="poppins-thin">Skills & tools I often use </h2>
+        <section id="skills" class="skills-section">
+            <h2 class="poppins-thin skills">Skills & tools I often use</h2>
             <div class="inria skills-list">
                 <span>C++</span> <span>Python</span> <span>C</span> <span>MERN</span> <span>Git</span> <span>Docker</span>
                 <span>ROS/ROS2</span> <span>NAV2</span> <span>MoveIt</span>
@@ -46,6 +47,7 @@
                 <span>AWS Robomaker</span> <span>AWS SQS</span> <span>AWS Greengrass</span>
             </div>
         </section>
+
         <section id="experience">
             <h2 class="poppins-thin">Teams I've grown with</h2>
             <div class="job">
@@ -155,17 +157,16 @@
                 </div>
             </div>
         </section>
+
         <section id="projects">
             <h2 class="poppins-thin">Things I've built</h2>
             <div class="project-cards">
                 <div class="card">
                     <img class= "image" src="assets/projects/travis.HEIC" alt="Travis">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Travis
                             </span>
-                        </a>
                         <p class="desc">
                             I modeled, simulated, built, and coded this Jetson Nano based UGV with SLAM, autonomous navigation, and ODCL using YOLOv3 for my Girlfriend's end-semester engineering project. She got an A!
                         </p>
@@ -178,19 +179,43 @@
                     </div>
                 </div>
                 <div class="card">
+                    <img class= "image" src="assets/projects/hi5.jpg" alt="HI5 Bed Slinger">
+                    <div class="content">
+                            <span class="title">
+                                HI5 Bed Slinger
+                            </span>
+                        <p class="desc">
+                            Version 3 of my lowcost custom fabricated ROS Noetic based UGV testbeds with SLAM, autonomous navigation, and ODCL using YOLOv3.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
                     <img class= "image" src="assets/projects/project_tango_v2.HEIC" alt="Project Tango v2">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Project Tango v2
                             </span>
-                        </a>
-                    
                         <p class="desc">
                             Version 2 of my lowcost custom fabricated ROS Melodic based UGV testbeds with SLAM, autonomous navigation.
                         </p>
-                    
                         <a class="action" href="https://github.com/carpit680/project_tango" target="_blank">
+                            Find out more
+                            <span class="material-symbols-outlined">
+                                north_east
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class= "image" src="assets/projects/eve.JPG" alt="EVE">
+                    <div class="content">
+                            <span class="title">
+                                EVE
+                            </span>
+                        <p class="desc">
+                            Eve is our entry into the Mahindra $1 million challenge. It is the culmination of years of hard work and is packed with cutting edge technologies and techniques – made even more impressive as we were the youngest team to qualify for the finals.
+                        </p>
+                        <a class="action" href="https://gitlab.com/project-manas/ai" target="_blank">
                             Find out more
                             <span class="material-symbols-outlined">
                                 north_east
@@ -201,11 +226,9 @@
                 <div class="card">
                     <img class= "image" src="assets/projects/project_tango.jpg" alt="Project Tango v1">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Project Tango v1
                             </span>
-                        </a>
                         <p class="desc">
                             My first ever attempt at building a turtlebot clone. It is a ROS Kinetic based UGV with SLAM and autonomous navigation(barely).
                         </p>
@@ -214,37 +237,37 @@
                 <div class="card">
                     <img class= "image" src="assets/projects/drone_rover.jpg" alt="AUVSI SUAS Prototype">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 AUVSI SUAS Prototypes
                             </span>
-                        </a>
                         <p class="desc">
                             VTOL and UGV testbeds for separately testing complete AUVSI SUAS missions for our entry to their 2019 competition.
                         </p>
                     </div>
                 </div>
                 <div class="card">
-                    <img class= "image" src="assets/projects/hi5.jpg" alt="HI5 Bed Slinger">
+                    <img class= "image" src="assets/projects/solo.jpg" alt="Solo">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
-                                HI5 Bed Slinger
+                                Solo
+                            </span>
+                        <p class="desc">
+                            Never Heard of Solo? It’s the UGV that made the headlines at IGVC in less than twelve months after its predecessor Adam’s entry. Grand Prize winners and won the Lescoe Cup at IGVC, an international level robotics competition held at Oakland University, Michigan, USA.
+                        </p>
+                        <a class="action" href="https://gitlab.com/project-manas/ai/igvc_2019" target="_blank">
+                            Find out more
+                            <span class="material-symbols-outlined">
+                                north_east
                             </span>
                         </a>
-                        <p class="desc">
-                            Version 3 of my lowcost custom fabricated ROS Noetic based UGV testbeds with SLAM, autonomous navigation, and ODCL using YOLOv3.
-                        </p>
                     </div>
                 </div>
                 <div class="card">
                     <img class= "image" src="assets/projects/rover2.jpg" alt="Prototype Rover 2">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Prototype Rover 2
                             </span>
-                        </a>
                         <p class="desc">
                             A prototype rover built to test autonomous waypoint navigation missions using the PixHawk autopilot.
                         </p>
@@ -253,11 +276,9 @@
                 <div class="card">
                     <img class= "image" src="assets/projects/smart_mirror.jpg" alt="Smart Mirror">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Smart Mirror
                             </span>
-                        </a>
                         <p class="desc">
                             A Smart mirror(that's just what they are called) built using a RaspberryPi running google assistant providing news, weather, music control, gallery, notifications, nest device control, and more.
                         </p>
@@ -266,12 +287,9 @@
                 <div class="card">
                     <img class= "image" src="assets/projects/smart_lock.jpg" alt="Smart Lock">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Smart Lock
                             </span>
-                        </a>
-                    
                         <p class="desc">
                             A smart(sort of) solenoid door lock accessible via web app, Biometric, and RFID with on demand camera feed and a really loud anti-theft buzzer. 
                         </p>
@@ -280,11 +298,9 @@
                 <div class="card">
                     <img class= "image" src="assets/projects/vending_machine.jpg" alt="Vending Machine">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Vending Machine
                             </span>
-                        </a>
                         <p class="desc">
                             A simple RaspberryPi based vending machine I built for Innovation Center at Manipal Institute of Technology to dispense Electronics and embedded components accessible to students via RFID based credit system.
                         </p>
@@ -299,11 +315,9 @@
                 <div class="card">
                     <img class= "image" src="assets/projects/drone2.jpg" alt="Lightweight UAV">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Lightweight indoor UAV prototype 
                             </span>
-                        </a>
                         <p class="desc">
                             Lightweight indoor quadrotor prototype built to test mapping algorithms for AUVSI SUAS during my time as Sensing and Automation Head at Project Manas.
                         </p>
@@ -312,11 +326,9 @@
                 <div class="card">
                     <img class= "image" src="assets/projects/drone3.jpg" alt="Makeshift UAV">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Makeshift UAV testbed
                             </span>
-                        </a>
                         <p class="desc">
                             Makeshift autonomous drone I had to build during covid for testing obstacle avoidance and mission completion for AUVSI SUAS during my time as Sensing and Automation Head at Project Manas.
                         </p>
@@ -325,11 +337,9 @@
                 <div class="card">
                     <img class= "image" src="assets/projects/warehouse_interface.png" alt="Accio Warehouse Interface">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Accio Warehouse Interface
                             </span>
-                        </a>
                         <p class="desc">
                             A warehouse robot web interface prototype for tracking order fullfilment and monitoring robot telemetry.
                         </p>
@@ -344,11 +354,9 @@
                 <div class="card">
                     <img class= "image" src="assets/projects/grid2.jpg" alt="X8 Octocopter">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 X8 Octocopter
                             </span>
-                        </a>
                         <p class="desc">
                             An X8 Octocopter I designed and simulated with ROS2/Gazebo within the span of about a week for autonomously navigating through Flipkart Grid 2.0's indoor challenge track.
                         </p>
@@ -357,11 +365,9 @@
                 <div class="card">
                     <img class= "image" src="assets/projects/wingit.jpg" alt="WingIt">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 WingIt
                             </span>
-                        </a>
                         <p class="desc">
                             An original restaurant menu web app(my first Full-stack project) prototype built before these web apps swarmed the restaurants world-wide.
                         </p>
@@ -373,40 +379,16 @@
                         </a>
                     </div>
                 </div>
-                <div class="card">
-                    <img class= "image" src="assets/projects/solo.jpg" alt="Solo">
-                    <div class="content">
-                        <a href="#">
-                            <span class="title">
-                                Solo
-                            </span>
-                        </a>
-                    
-                        <p class="desc">
-                            Never Heard of Solo? It’s the UGV that made the headlines at IGVC in less than twelve months after its predecessor Adam’s entry. Grand Prize winners and won the Lescoe Cup at IGVC, an international level robotics competition held at Oakland University, Michigan, USA.
-                        </p>
-                    
-                        <a class="action" href="https://gitlab.com/project-manas/ai/igvc_2019" target="_blank">
-                            Find out more
-                            <span class="material-symbols-outlined">
-                                north_east
-                            </span>
-                        </a>
-                    </div>
-                </div>
+                
                 <div class="card">
                     <img class= "image" src="assets/projects/seraphim.png" alt="Seraphim">
                     <div class="content">
-                        <a href="#">
                             <span class="title">
                                 Seraphim
                             </span>
-                        </a>
-                    
                         <p class="desc">
                             Seraphim is a fully autonomous drone and an autonomous Unmanned Ground Vehicle system. It was our entry to the Student Unmanned Aerial Systems Competition (SUAS) organized by the Association for Unmanned Vehicle Systems International (AUVSI).
                         </p>
-                    
                         <a class="action" href="https://gitlab.com/project-manas/ai/auvsi-suas-2023" target="_blank">
                             Find out more
                             <span class="material-symbols-outlined">
@@ -415,25 +397,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="card">
-                    <img class= "image" src="assets/projects/eve.JPG" alt="EVE">
-                    <div class="content">
-                        <a href="#">
-                            <span class="title">
-                                EVE
-                            </span>
-                        </a>
-                        <p class="desc">
-                            Eve is our entry into the Mahindra $1 million challenge. It is the culmination of years of hard work and is packed with cutting edge technologies and techniques – made even more impressive as we were the youngest team to qualify for the finals.
-                        </p>
-                        <a class="action" href="https://gitlab.com/project-manas/ai" target="_blank">
-                            Find out more
-                            <span class="material-symbols-outlined">
-                                north_east
-                            </span>
-                        </a>
-                    </div>
-                </div>
+                
             </div>
         </section>
 

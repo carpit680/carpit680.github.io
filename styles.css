@@ -68,6 +68,25 @@ header h1 {
     padding: 0.5rem 0 0.5rem 0;
     line-height: 100%;
     margin: 0;
+    overflow: hidden;
+}
+h1 span {
+  display: block;
+  animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
+p span {
+    display: block;
+  animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(0,100%);
+  }
+  100% {
+    transform: translate(0,0);
+  }
 }
 .header-div {
     display: flex;
@@ -87,6 +106,7 @@ header h1 {
     margin: 1rem 0;
     font-size: 1.5vw;
     color: #d2d2d2;
+    overflow: hidden;
 }
 
 .header-img {
@@ -97,8 +117,19 @@ header h1 {
 .header-img img {
     height: auto;
     width: 40vw;
+    animation: revealImage 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
+@keyframes revealImage {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media screen and (max-width: 500px) {
     header {
         height: 90%;
@@ -135,9 +166,8 @@ header h1 {
     margin: auto;
     left: 50%;
     top: 80px;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
     z-index: 9999;
+    animation: revealImage 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 #mouse-scroll span{
     display: block;
@@ -267,7 +297,9 @@ h2 {
     line-height: 100%;
     padding: 0;
     width: 75%;
+    overflow: hidden;
 }
+
 h2.poppins-thin {
     font-weight: bold;
     margin: 5rem 0 5rem 0;
@@ -297,12 +329,12 @@ h2.poppins-thin {
     flex-shrink: 1;
 }
 
-#skills span {
-    margin: 2rem;
+.skills-list span {
+    margin: 1.5rem;
     color: #ffffff;
     border-radius: 20px;
     padding: 0 1.5rem;
-    box-shadow:  5px 5px 10px rgba(25, 25, 25, 0.645),
+    box-shadow: 5px 5px 10px rgba(25, 25, 25, 0.645),
              -5px -5px 10px rgba(60, 60, 60, 0.397);
 }
 
@@ -553,14 +585,14 @@ transform: translateX(4px);
 }
 .contact a {
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 5vw;
     line-height: 120%;
     color: #6d818e;
 }
 .contact .mail {
     font-size: 5vw;
-    padding: 0rem 10rem;
+    padding: 0rem 15rem;
 }
 .contact a:hover {
     color: #ffffff;

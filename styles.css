@@ -21,6 +21,9 @@ body {
 * {
     scrollbar-width: thin;
     scrollbar-color: rgb(148, 148, 148) #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -53,7 +56,7 @@ a {
     text-decoration: none;;
 }
 
-/* Header */
+/* HEADER */
 
 header {
     color: #ffffff;
@@ -88,6 +91,7 @@ p span {
     transform: translate(0,0);
   }
 }
+
 .header-div {
     display: flex;
     flex-direction: row;
@@ -312,6 +316,7 @@ h2.poppins-thin {
     }
     h2 {
         width: 100%;
+        line-height: 110%;
     }
     h2.poppins-thin {
         font-size: 15vw;
@@ -366,7 +371,6 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-height: 80vh;
 }
 
 .job-description {
@@ -489,7 +493,6 @@ li::marker {
     border-radius: 0.5rem;
     background-color: #fff;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    /* border: 1px solid transparent; */
     margin: 2rem;
     min-height: fit-content
 }
@@ -566,7 +569,9 @@ transform: translateX(4px);
         font-size: 5vw;
     }
 }
+
 /* CONTACT SECTION  */
+
 #contact {
     display: flex;
     flex-direction: column;

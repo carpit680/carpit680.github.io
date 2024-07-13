@@ -139,7 +139,7 @@ p span {
         height: 90%;
     }
     .header-div {
-        padding: 2rem 0 0 0;
+        padding: 3rem 0 0 0;
         flex-direction: column;
         width: 100%;
     }
@@ -150,9 +150,9 @@ p span {
         margin: 0;
     }
     .header-img img {
-        height: auto;
         width: 90vw;
-        margin: 2rem 0 0rem 0;
+        height: auto;
+        margin: 4rem 0 0rem 0;
     }
     .header-text p {
         padding: 0;
@@ -311,7 +311,8 @@ h2.poppins-thin {
 
 @media screen and (max-width: 500px) {
     section {
-        margin: 0 0 4rem 0;
+        margin: 4rem 0 4rem 0;
+        padding: 1rem 0;
         width: 100%;
     }
     h2 {
@@ -626,20 +627,6 @@ transform: translateX(4px);
 
 /* FOOTER SECTION  */
 
-@media screen and (max-width: 500px) {
-    footer {
-        padding : 0;
-        height: max-content;
-        margin: 1rem 0 0 0;
-    }
-    footer .poppins-thin {
-        font-size: 4vw;
-        font-weight: 200;
-        padding: 0 1rem;
-        line-height: 20%;
-    }
-}
-
 footer {
     text-align: center;
     padding: 0.2rem 0;
@@ -665,4 +652,19 @@ footer .material-symbols-outlined {
         'wght' 200,
         'GRAD' 0,
         'opsz' 12
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        padding : 0;
+        height: max-content;
+        margin: 1rem 0 0 0;
+    }
+    footer .poppins-thin {
+        font-size: 4vw;
+        font-weight: 200;
+        padding: 1.2rem 1rem 1rem 1rem;
+        margin-bottom: 1rem;
+        line-height: 20%;
+    }
 }

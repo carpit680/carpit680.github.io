@@ -431,7 +431,7 @@ li::marker {
     .job-description {
         margin: 0;
         width: 100%;
-        padding: 0;
+        padding: 0 0 0 0.5rem;
     }
     .job-description ul li{
         width: 85vw;
@@ -532,6 +532,11 @@ transform: translateX(4px);
         'opsz' 12
     }
 
+@media screen and (max-width: 500px) {
+    .desc {
+        text-align: justify;
+    }
+}
 /* ACCOMPLISHMENTS SECTION */
 
 #accomplishments {
@@ -542,6 +547,9 @@ transform: translateX(4px);
 @media screen and (max-width: 500px) {
     #accomplishments {
         font-size: 5vw;
+    }
+    #accomplishments ul{
+        padding-left: 0.5rem;
     }
 }
 

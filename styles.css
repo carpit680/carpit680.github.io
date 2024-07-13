@@ -636,8 +636,8 @@ footer .material-symbols-outlined {
     footer .poppins-thin {
         font-size: 4vw;
         font-weight: 200;
-        padding: 0.6rem 1rem 1rem 1rem;
-        margin-bottom: 1.5rem;
+        padding: 0.8rem 1rem 0.1rem 1rem;
+        margin-bottom: 2rem;
         line-height: 100%;
     }
 }

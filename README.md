@@ -6,9 +6,11 @@ This single-page portfolio is built using only HTML and CSS. I aim to implement 
 
 ## Known issues / pending features:
 * ~~MAJOR: Divs in the experience section overlap each-other on android forms. There is a dirty workaround but I am still looking for a better solution.~~
+* Add a proper Favicon.
+* Add a Navbar.
 * Project cards lack space for detailed information.
 * Project cards cannot show multiple images or videos.
 * Skills section isn't satisfactory. (Ideas please?)
-* H2 texts reveal animation when scrolled into viewport.
+* H2 texts reveal animation when scrolled into the viewport.
 
 Feel free to use the template for your portfolio. Ping me for any suggestions or start a discussion on the issues tab.

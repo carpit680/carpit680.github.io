@@ -368,6 +368,7 @@ h2.poppins-thin {
     .skills-list {
         font-size: 4vw;
         margin: 0;
+        justify-content: space-evenly;
     }
     #skills span {
         margin: 0.7rem 0;

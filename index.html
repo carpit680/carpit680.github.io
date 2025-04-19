@@ -9,16 +9,64 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <html>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const line1 = document.getElementById("line1");
+          const line2 = document.getElementById("line2");
+          const line3 = document.getElementById("line3");
+          const line4 = document.getElementById("line4");
+          const scroll = document.getElementById("mouse-scroll");
+          const charDelay = 20;
+        
+          function typeText(el) {
+            return new Promise(res => {
+              const txt = el.textContent;
+              el.textContent = "";
+              let i = 0;
+              const timer = setInterval(() => {
+                el.textContent += txt[i++];
+                if (i === txt.length) {
+                  clearInterval(timer);
+                  return res();
+                }
+              }, charDelay);
+            });
+          }
+        
+          // 1) Type “Hi.”
+          typeText(line1)
+            .then(() => {
+              // remove its cursor
+              line1.classList.remove("typing");
+        
+              // 2) Reveal the two H1s
+              line2.classList.add("show");
+              setTimeout(() => line3.classList.add("show"), 250);
+        
+              // 3) After they’re in place, type the last line
+              setTimeout(() => {
+                  line4.classList.add("show");
+                  scroll.classList.add("visible");
+                  typeText(line4).then(() => {
+                  // keep a blinking cursor on the last line
+                  // 4) Finally, show the scroll icon
+                  line4.classList.add("blink");
+        
+                });
+              }, 500);  // give a small pause after both have revealed
+            });
+        });
+        </script>
     <body>
         <header>
             <div class="header-div">
                 <div class="header-text">
-                    <p class="inria"><span class="animated">Hi.</span></p>
-                    <h1 class="poppins-thin">
-                        <span>I'm Arpit.</span></h1>
-                    <h1 class="poppins-thin"><span>An Engineer.</span></h1>
-                    <p class="inria"><span class="animated">I am into robotics and embodied AI, a builder at heart, based out of busy Bangalore.</span></p>
-                </div>
+                    <p class="inria"><span id="line1" class="typing">Hi.</span></p>
+                    <h1 class="poppins-thin"><span id="line2" class="reveal">I’m Arpit.</span></h1>
+                    <h1 class="poppins-thin"><span id="line3" class="reveal">An Engineer.</span></h1>
+                    <p class="inria"><span id="line4" class="typing">Robots | Physical AI | Bangalore hustle.</span></p>
+                  </div>
+                  
                 <div class="header-img">
                     <img src="assets/arpit.jpeg" alt="Profile Picture">
                 </div>
@@ -36,16 +84,17 @@
                 </div>
             </a>
         </header>
+
         <section id="skills">
             <h2 class="poppins-thin skills">Skills & tools I often use</h2>
             <div class="inria skills-list">
                 <span>C++</span> <span>Python</span> <span>C</span> <span>MERN</span> <span>Git</span> <span>Docker</span>
-                <span>ROS/ROS2</span> <span>NAV2</span> <span>MoveIt</span>
+                <span>ROS/ROS2</span> <span>NAV2</span> <span>MoveIt2</span>
                 <span>Electronics</span> <span>PCB Design</span>
-                <span>Pybind11</span> <span>OpenMP</span> <span> OpenCV</span>
-                <span>Fusion 360</span> <span>Node-Red</span> <span>IoT</span> <span>Isaac Sim</span> <span>Gazebo</span>
-                <span>Path Planning</span> <span>Perception</span> <span>SLAM</span>
-                <span>AWS Robomaker</span> <span>AWS SQS</span> <span>AWS Greengrass</span>
+                <span>Pybind11</span> <span>OpenMP</span> <span> OpenCV</span> <span>OpenCV</span> <span>Open3D</span> <span>LeRobot</span> <span>Torch</span> <span>Numpy</span>
+                <span>Fusion 360</span> <span>Node-Red</span> <span>IoT</span> <span>Isaac Sim</span> <span>Gazebo</span> <span>Mujoco</span>
+                <span>Path Planning</span> <span>Perception</span> <span>SLAM</span> <span>Navigation</span> <span>Sensor Fusion</span>
+                <span>Robomaker</span> <span>SQS</span> <span>Greengrass</span> <span>Kafka</span>
             </div>
         </section>
 
@@ -60,12 +109,14 @@
                         </span>
                     </a>
                     <ul class="inria">
-                        <li>Development of ROS2-based software stack for SLAM and teleoperation for UGVs.</li>
-                        <li>Development of velocity-constrained RPP path planning with Dubin’s curves.</li>
-                        <li>Design and development of a software stack for easy sensor fusion (EKF) tuning and testing.</li>
                         <li>Development of a novel perception algorithm for 6D pose and dimension calculation for cartons in an unstructured environment using a stereo camera.</li>
                         <li>Development of Aruco/April Tag-based visual localization for UGVs.</li>
-                        <li>Development of Solid State LIDAR with Stereo Camera fusion algorithm for accurate 3D segmentation using Faiss and pose calculation.</li>
+                        <li>Development of 3D LIDAR and Stereo Camera fusion algorithm for accurate 3D segmentation & pose calculation using Faiss.</li>
+                        <li>Development of novel Stereo+LIDAR-based localization and navigation for a 3-ton robot in tight spaces.</li>
+                        <li>Development of Vision-based, target-agnostic conveyor clog detection, declogging, and efficiency tracking algorithm.</li>
+                        <li>Development of ROS2-based software stack for SLAM and teleoperation for UGVs.</li>
+                        <li>Development of velocity-constrained RPP path planning with Dubin’s curves.</li>
+                        <li>Design and development of a software stack for easy sensor fusion(EKF) tuning and testing.</li>
                     </ul>
                 </div>
                 <div class="job-img">
@@ -405,8 +456,14 @@
         <section id="accomplishments">
             <h2 class="poppins-thin">This and that</h2>
             <ul class="inria">
-                <li>I dropped out of my Electronics and Communication Engineering degree after my second year of university.</li>
-                <li>I have worked as a freelancer for 6+ months during Covid-19 lockdown.</li>
+                <li>Building robots since I was 13.</li>
+                <li>A college dropout to a self-taught robotics engineer with 5+ years of industrial experience.</li>
+                <li>We won the LESCOE Cup at IGVC in Maryland and were the youngest finalists in the Mahindra Rise Prize Challenge.</li>
+                <li>My perception algorithms are currently deployed by Amazon, Home Depot, and other warehouses for truck unloading, competing with offerings from Boston Dynamics and others.</li>
+                <li>I have built 3D printers, drones, AGVs, web apps, robotic manipulators, mobile manipulators, self-driving cars, and several other robots.</li>
+                <li>Sold freshly made smoothies worth 21k INR, for three months, using a smoothie-making robot we built.</li>
+                <li>Worked on building a food-robotics startup for 3 years as a founding team member and failed.</li>
+                <li>Worked as a freelancer for 6+ months during Covid-19 lockdown.</li>
                 <li>Second runner-up in IEEE SB Manipal Hackathon with tamper-proof(not really, now I know) smart lock with a camera feed on demand, RFID, Biometric, facial, and app unlock.</li>
             </ul>
         </section>

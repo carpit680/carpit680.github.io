@@ -2,7 +2,7 @@
 
 This repository contains my portfolio webpage.
 
-This single-page portfolio is built using only HTML and CSS. I aim to implement all of the interactions/animations in the website without any JavaScript.
+This single-page portfolio is built without any frameworks or libraries..
 
 ## Known issues / pending features:
 * ~~MAJOR: Divs in the experience section overlap each-other on android forms. There is a dirty workaround but I am still looking for a better solution.~~
